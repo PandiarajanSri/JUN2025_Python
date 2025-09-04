@@ -9,3 +9,5 @@ B : Built-in (Python) - Names preassigned in the built-in names module : open,ra
 lambda num : num **2
 
 print(num(10))
+
+'''This line is added now for testing'''
