@@ -6,10 +6,55 @@ B : Built-in (Python) - Names preassigned in the built-in names module : open,ra
 
 '''Local Variable'''
 
-lambda num : num **2
+# #Global Variable
+# name = 'This is a global variable'
+#
+# def greet():
+#     #name = "This is a enclosed variable"    # This is a Enclosed variable
+#
+#     def hello():
+#         # Local variable
+#         #name = "This is the local variable"
+#         print('Hello ' + name)
+#
+#     hello()
+#
+# greet()
 
-print(num(10))
+# x = 50  # Global assignement
+#
+# def func(x):
+#     print("X is ",x)
+#     #print(f'X is {x}')
+#
+#     x = 200 #Local Assignment
+#     print("I just locally changed to ", x)
+#
+# func(x)
+#
+# print(x)
 
-'''This line is added now for testing'''
+x = 50  # Global assignement
 
-'''Now second line'''
+def func():
+    global x
+
+    print("X is ",x)
+    #print(f'X is {x}')
+
+    x = 'New value' #Local Assignment
+    print("I just changed to global assignment ", x)
+
+func()
+
+print(x)
+
+
+
+
+
+
+
+
+
+
