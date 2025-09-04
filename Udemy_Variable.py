@@ -11,3 +11,5 @@ lambda num : num **2
 print(num(10))
 
 '''This line is added now for testing'''
+
+'''Now second line'''
