@@ -428,12 +428,22 @@ SPY GAME : Write a function that takes in a list of integers and returns True if
 #
 # print(list(map(square,my_nums)))
 
-def splicer(my_string):
-    if len(my_string) % 2 == 0:
-        return 'Even'
-    else:
-        return my_string[0]
+# def splicer(my_string):
+#     if len(my_string) % 2 == 0:
+#         return 'Even'
+#     else:
+#         return my_string[0]
+#
+# names = ['Pandiarajan','PoornimaDevi','Deekshanaasri']
+#
+# print(list(map(splicer,names)))
 
-names = ['Pandiarajan','PoornimaDevi','Deekshanaasri']
+def check_even(num):
+    return num % 2 == 0
 
-print(list(map(splicer,names)))
+my_num = [1,2,3,4,5,6,7,8]
+
+# print(list(filter(check_even,my_num)))
+
+# for i in filter(check_even,my_num):
+#     print (i)
