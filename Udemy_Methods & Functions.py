@@ -98,6 +98,7 @@
 
 # example = [1,2,3,4,5,6,7]
 from random import shuffle
+
 #
 # # shuffle(example)
 # #
@@ -177,8 +178,8 @@ from random import shuffle
 
 '''*args & **kwargs'''
 
-#* args - Uses to give n number of arguments in tuples. * followed by any key word. *spam also same. After * is a arbitary choice.
-#Better use *args
+# * args - Uses to give n number of arguments in tuples. * followed by any key word. *spam also same. After * is a arbitary choice.
+# Better use *args
 
 # **kwargs - Uses to give n number of arguments and return key word. Basically it makes as input as dictinory
 
@@ -227,7 +228,7 @@ from random import shuffle
 
 
 # def myfunc(s):
-    #return ''.join([char.lower() if i % 2 == 0 else char.upper() for i, char in enumerate(s)])
+# return ''.join([char.lower() if i % 2 == 0 else char.upper() for i, char in enumerate(s)])
 
 # a = "Deekshanaasri"
 #
@@ -352,7 +353,6 @@ characters
 paper_doll('Hello') -> 'HHHeeellllllooo 
 paper_doll('') -> 'MMMiiissssssiiissssssiiippppppi' '''
 
-
 # def paper_doll(string):
 #     result = ''
 #     for i in string:
@@ -438,12 +438,55 @@ SPY GAME : Write a function that takes in a list of integers and returns True if
 #
 # print(list(map(splicer,names)))
 
-def check_even(num):
-    return num % 2 == 0
+# def check_even(num):
+#     return num % 2 == 0
+#
+# my_num = [1,2,3,4,5,6,7,8]
+#
+# # print(list(filter(check_even,my_num)))
+#
+# # for i in filter(check_even,my_num):
+# #     print (i)
 
-my_num = [1,2,3,4,5,6,7,8]
 
-# print(list(filter(check_even,my_num)))
+'''63. Functions & Methods Homework'''
 
-# for i in filter(check_even,my_num):
-#     print (i)
+'''1. Write a function that computes the volume of the sphere given its radius
+
+The volume of the sphere is given as 4/3 pi r^3'''
+
+# def sphere (r):
+#     volume = float(4/3 * 3.14 * r**3)
+#     print("The volume of the sphere is : ",volume)
+#
+# sphere(2)
+
+'''2. Write a function that checks whether a number is in a given range (inclusive of high and low
+
+def ran_check(num,low,high):
+pass
+
+#Check
+ran_check(5,2,7)
+
+if you only wanted to return a boolean:
+def ran_bool(num,low,high):
+pass
+
+ran_bool(3,1,10)
+True
+'''
+
+def ran_check(num,low,high):
+    if low <= num <= high:   # num <= low and num <= high
+        print(f'{num} is in the range between {low} and {high}')
+    else:
+        print(f'{num} is not in the range between {low} and {high}')
+
+ran_check(15,1,10)
+
+
+
+
+
+
