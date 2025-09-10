@@ -477,16 +477,84 @@ ran_bool(3,1,10)
 True
 '''
 
-def ran_check(num,low,high):
-    if low <= num <= high:   # num <= low and num <= high
-        print(f'{num} is in the range between {low} and {high}')
+# def ran_check(num,low,high):
+#     if low <= num <= high:   # num <= low and num <= high
+#         #print(f'{num} is in the range between {low} and {high}')
+#         return True
+#     else:
+#         return False
+#         #print(f'{num} is not in the range between {low} and {high}')
+#
+# print(ran_check(5,1,10))
+# #ran_check(5,1,10)
+
+'''3. Write a python function that accepts a string and calculates the number of upper case
+letters and Lower case letters
+
+Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday ?'
+Expected Output :
+No. of Upper case characters : 4 
+No of Lower case characters : 33 
+
+Hint : Two strings methods that might prove useful : .isupper() and .islower'''
+
+# s = 'Hello Mr. Rogers, How are you this fine Tuesday ?'
+#
+# def up_low(s):
+#     upper_count = 0
+#     lower_count = 0
+#
+#     for char in s:
+#         if char.isupper():
+#             upper_count = upper_count + 1
+#
+#         elif char.islower():
+#             lower_count = lower_count + 1
+#
+#     print(f' No .of upper case characters : {upper_count}')
+#     print(f' No .of lower case characters : {lower_count}')
+#
+# up_low(s)
+
+
+
+'''4. Write a Python function that takes a list and returns a new list with unique elements of the first list
+
+Sample list : [1,1,1,1,1,2,2,2,3,3,3,3,3,3,4,5]
+Unique list : [1,2,3,4,5]'''
+
+s = [1,1,1,1,1,2,2,2,3,3,3,3,3,3,4,5]
+
+# def unique_list(s):
+#     new_list = set(s)
+#     new_unique_list = list(new_list)
+#     print(f' Unique list : {new_unique_list}')
+#
+# unique_list(s)
+
+'''5. Write a Python function to multiply all the numbers in the list.
+Sample List [1,2,3,-4]
+Expected Output : -24'''
+
+# S = [1,2,3,-4]
+#
+# a,b,c,d = S
+#
+# def multiply(S):
+#     print(a * b * c * d)
+#
+# multiply(S)
+
+'''6. Write a Python function that checks wether  a word or phrase is palindrome or not'''
+
+#s = 'helleeh'
+s = 'madam'
+
+def palindrome(s):
+    if s == s[::-1]:
+        return True
+
     else:
-        print(f'{num} is not in the range between {low} and {high}')
+        return False
 
-ran_check(15,1,10)
-
-
-
-
-
-
+print(palindrome(s))
