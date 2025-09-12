@@ -42,6 +42,9 @@
 # print(_even_check(21))
 
 '''Return True if any number is even inside a list'''
+import string
+
+from pyparsing import alphas, alphas8bit
 
 # def _even_check_list(my_list):
 #     for i in my_list:
@@ -488,6 +491,14 @@ True
 # print(ran_check(5,1,10))
 # #ran_check(5,1,10)
 
+''' or '''
+# def ran_check(num,low,high):
+#     return num in range(low,high+1)
+#
+# print(ran_check(11,1,10))
+
+
+
 '''3. Write a python function that accepts a string and calculates the number of upper case
 letters and Lower case letters
 
@@ -498,23 +509,7 @@ No of Lower case characters : 33
 
 Hint : Two strings methods that might prove useful : .isupper() and .islower'''
 
-# s = 'Hello Mr. Rogers, How are you this fine Tuesday ?'
 #
-# def up_low(s):
-#     upper_count = 0
-#     lower_count = 0
-#
-#     for char in s:
-#         if char.isupper():
-#             upper_count = upper_count + 1
-#
-#         elif char.islower():
-#             lower_count = lower_count + 1
-#
-#     print(f' No .of upper case characters : {upper_count}')
-#     print(f' No .of lower case characters : {lower_count}')
-#
-# up_low(s)
 
 
 
@@ -545,16 +540,86 @@ Expected Output : -24'''
 #
 # multiply(S)
 
+'''or'''
+
+# s = [1,2,3,-4]
+#
+# def multiply(s):
+#     final_number = 1
+#     for num in s:
+#         final_number = final_number * num
+#
+#     return final_number
+#
+# print(f' The number is ', multiply(s))
+
 '''6. Write a Python function that checks wether  a word or phrase is palindrome or not'''
 
-#s = 'helleeh'
-s = 'madam'
+# #s = 'helleeh'
+# s = 'madam'
+#
+# def palindrome(s):
+#     if s == s[::-1]:
+#         return True
+#
+#     else:
+#         return False
+#
+# print(palindrome(s))
 
-def palindrome(s):
-    if s == s[::-1]:
-        return True
+# '''To remove spaces in words'''
+# s = 'nurses run'
+# #s = 'racecar'
+#
+# s = s.replace(' ','')
+# print(s)
+#
+# def palindrome(s):
+#     if s == s[::-1]:
+#         return True
+#
+#     else:
+#         return False
+#
+#
+# print(palindrome(s))
 
-    else:
-        return False
 
-print(palindrome(s))
+'''Hard
+Write a python function to check whether a string is pangram or not. (Assume the string passed in 
+does not have any punctuation)
+
+Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
+
+For example : The quick brown fox jumps over the lazy dog
+
+Hint : You may want to use .replace() method to get rid of spaces.
+Hint : Look at the string module
+Hint : In case you want to use set comparison'''
+
+# s = 'The quick brown fox jumps over the lazy dog'
+#
+# # create a set of the alphabet
+#
+# alphabet = set(string.ascii_lowercase)
+#
+# #print(alphabet)
+#
+# # Remove a space from the given sentences
+# s_without_space = s.replace(' ','')
+# #print(s_without_space)
+#
+# # Convert the input strings in to lower case
+# s_lower_case = s_without_space.lower()
+# #print(s_lower_case)
+# # Grab all the unique letters as set
+# alpha_set = set(s_lower_case)
+# #print(alpha_set)
+#
+# # Compare above set with the set of alphabets
+# if alphabet == alpha_set:
+#     print(True)
+#
+# else:
+#     print(false)
+
